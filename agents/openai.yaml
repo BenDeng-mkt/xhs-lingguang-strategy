@@ -1,0 +1,4 @@
+interface:
+  display_name: "灵光投放策略"
+  short_description: "用灵光可复核数据装配小红书投放策略"
+  default_prompt: "基于已登录的灵光，研究并装配小红书投放前诊断与定向策略。"
