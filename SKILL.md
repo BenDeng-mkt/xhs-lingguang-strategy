@@ -2,9 +2,9 @@
 name: xhs-lingguang-strategy
 description: Use when researching Xiaohongshu Lingguang/Lingxi through a logged-in Chrome session, turning verified platform results into pre-investment targeting strategy, keyword packages, audience tests, or a PPT-ready strategy package.
 metadata:
-  version: 0.1.1
+  version: 0.2.0
 created: 2026-08-25T10:25
-updated: 2026-08-25T10:32
+updated: 2026-08-25T10:41
 ---
 
 # 灵光投放策略
@@ -32,12 +32,13 @@ updated: 2026-08-25T10:32
 
 ## Operating route
 
-1. 判定工作模式：`explore`、`collect`、`validate`、`assemble` 或 `deliver`。
-2. 建立或续接一个项目的灵光主会话；优先读取已有页面、历史任务和产出物。除非语义完全无关，不新开会话。
-3. 读取 [evidence-contract.md](references/evidence-contract.md)，明确对象、商业类目、时间、指标和输出边界。
-4. 选择并完成最小策略原子；见 [strategy-atoms.md](references/strategy-atoms.md)。
-5. 记录任务卡。使用 [research-task-card.md](assets/research-task-card.md)；成功、失败和待确认都要留痕。
-6. 原子通过核验后，按 [delivery-assembly.md](references/delivery-assembly.md) 生成策略装配包；若需 PPTX，再调用 `$ppt-master`。
+1. 先运行 `bootstrap`；见 [bootstrap.md](references/bootstrap.md)。它检查项目输入、Chrome、登录状态和可续接的灵光主会话。
+2. `bootstrap: ready` 后，判定工作模式：`explore`、`collect`、`validate`、`assemble` 或 `deliver`。
+3. 建立或续接一个项目的灵光主会话；优先读取已有页面、历史任务和产出物。除非语义完全无关，不新开会话。
+4. 读取 [evidence-contract.md](references/evidence-contract.md)，明确对象、商业类目、时间、指标和输出边界。
+5. 选择并完成最小策略原子；见 [strategy-atoms.md](references/strategy-atoms.md)。
+6. 记录任务卡与项目会话状态。使用 [research-task-card.md](assets/research-task-card.md) 和 [project-session.md](assets/project-session.md)；成功、失败和待确认都要留痕。
+7. 原子通过核验后，按 [delivery-assembly.md](references/delivery-assembly.md) 生成策略装配包；若需 PPTX，再调用 `$ppt-master`。
 
 ## Permissions and pacing
 
@@ -63,4 +64,5 @@ updated: 2026-08-25T10:32
 - [evidence-contract.md](references/evidence-contract.md)：数据、实体与证据规则。
 - [strategy-atoms.md](references/strategy-atoms.md)：投放前诊断原子与通过条件。
 - [browser-operations.md](references/browser-operations.md)：Chrome 主会话与任务等待规范。
+- [bootstrap.md](references/bootstrap.md)：新项目的 Chrome/登录/会话启动协议。
 - [delivery-assembly.md](references/delivery-assembly.md)：策略装配包与 PPT 交接格式。
