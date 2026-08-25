@@ -2,7 +2,9 @@
 name: xhs-lingguang-strategy
 description: Use when researching Xiaohongshu Lingguang/Lingxi through a logged-in Chrome session, turning verified platform results into pre-investment targeting strategy, keyword packages, audience tests, or a PPT-ready strategy package.
 metadata:
-  version: 0.1.0
+  version: 0.1.1
+created: 2026-08-25T10:25
+updated: 2026-08-25T10:32
 ---
 
 # 灵光投放策略
